@@ -118,7 +118,10 @@ overflow: scroll;
   height: 103px;
   object-fit: cover;
   object-position: center;
-  margin-right: 3px;
+}
+
+.content__list-item {
+  margin: 0 3px;
 }
 
 .content__video-card-description-container {
@@ -187,7 +190,11 @@ overflow: scroll;
   cursor: pointer;
 }
 
-.search-form__label:active {
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -253,6 +260,27 @@ input[type='checkbox']:checked + span {
   background-color: #fff;
 }
 
+.content__card-link {
+  display: block;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
 
 ul,
 ol {

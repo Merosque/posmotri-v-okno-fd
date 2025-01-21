@@ -69,11 +69,6 @@ fieldset {
   gap: 40px;
 }
 
-.content__list-container {
-  position: relative;
-  inset: 0;
-}
-
 .content__details {
   display: flex;
   flex-direction: column;
@@ -104,6 +99,8 @@ fieldset {
   grid-area: container;
   height: 298px;
   overflow: scroll;
+  position: relative;
+  inset: 0;
 }
 
 .content__list {
@@ -133,11 +130,6 @@ fieldset {
 .content__video-card-description-container {
   flex-grow: 1;
   overflow: hidden;
-}
-
-.content__card-link {
-  color: #fff;
-  text-decoration: none;
 }
 
 .content__video-card-title {
@@ -268,6 +260,8 @@ input[type="checkbox"]:checked + span {
 
 .content__card-link {
   display: block;
+  color: #fff;
+  text-decoration: none;
 }
 
 .content__card-link:hover {
@@ -285,12 +279,6 @@ input[type="checkbox"]:checked + span {
 
 .content__card-link_current {
   background-color: #545050;
-}
-
-.preloader {
-  position: absolute;
-  width: 711px;
-  height: 386px;
 }
 
 ul,

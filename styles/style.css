@@ -159,6 +159,7 @@ overflow: scroll;
 }
 
 .search-form__textfield {
+  appearance: none;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
@@ -223,11 +224,16 @@ ol {
 }
 
 .visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
   clip: rect(0 0 0 0);
-clip-path: inset(50%);
-  width: 1px;
-height: 1px;
-overflow: hidden;
-position: absolute;
-white-space: nowrap;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }

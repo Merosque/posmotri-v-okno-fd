@@ -104,7 +104,7 @@ fieldset {
 .content__list-container {
   grid-area: container;
   height: 298px;
-  overflow: scroll;
+  overflow-y: auto;
   position: relative;
 }
   

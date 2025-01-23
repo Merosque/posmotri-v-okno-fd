@@ -17,6 +17,8 @@ video {
 .page {
   display: flex;
   margin: auto;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -43,11 +45,10 @@ fieldset {
   display: grid;
   align-content: center;
   grid-template-columns: 711px 399px;
-  grid-template-rows: 534px;
+  grid-template-rows: 1fr;
   grid-template-areas: "result  container";
   column-gap: 30px;
-  width: 1140px;
-  margin: 133px 30px;
+  inline-size: 1140px;
 }
 
 .result {
@@ -60,20 +61,20 @@ fieldset {
 
 .result__video-container {
   position: relative;
-  inset: 0;
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  margin-block-end: 16px;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
+  object-fit: fill;
+  object-position: center;
 }
 
 .search-form {
   display: flex;
-  height: 54px;
   align-items: flex-end;
   gap: 40px;
 }
@@ -90,7 +91,7 @@ fieldset {
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
@@ -98,21 +99,15 @@ fieldset {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
-  font-size: 75px;
-  line-height: 94%;
-  text-transform: uppercase;
 }
 
 .content__list-container {
   grid-area: container;
   height: 298px;
   overflow: scroll;
-  overflow-x: hidden;
   position: relative;
-  inset: 0;
 }
-
+  
 .content__list {
   display: flex;
   flex-direction: column;
@@ -133,7 +128,7 @@ fieldset {
 }
 
 .content__list-item {
-  margin: 0 3px;
+  margin-right: 3px;
 }
 
 .content__video-card-description-container {
@@ -143,7 +138,7 @@ fieldset {
 
 .content__video-card-title {
   overflow: hidden;
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
@@ -169,7 +164,6 @@ fieldset {
 
 .search-form__textfield {
   width: 225px;
-  height: 27px;
   border-top: 1px solid #fff;
   border-right: none;
   border-bottom: 1px solid #fff;
@@ -205,7 +199,7 @@ fieldset {
   outline: none;
 }
 
-.search-form__label:focus-visible {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -217,11 +211,12 @@ fieldset {
 .search-form__checkbox-list {
   display: flex;
   column-gap: 15px;
-  width: 212px;
+  max-width: 212px;
   margin-bottom: 5px;
 }
 
 .button {
+  font-family: 'Oswald', sans-serif;
   font-size: 18px;
   height: 34px;
   border: 1px solid #fff;
@@ -237,20 +232,17 @@ fieldset {
 
 .button:hover {
   cursor: pointer;
-}
-
-.search-form__submit-button {
-  width: 194px;
-}
-
-.search-form__submit-button:hover {
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
 
-.search-form__submit-button:active {
+.button:active {
   text-decoration: none;
   background: #545050;
+}
+
+.search-form__submit-button {
+  width: 194px;
 }
 
 .more-button {
